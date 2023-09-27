@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Soma(){
+            var tn1 = document.getElementById("v1")
+            var tn2 = document.getElementById("v2")
+            var num1 = Number(tn1.value)
+            var num2 = Number(tn2.value)
+            var resultado = document.getElementById("res")
+            var soma = num1 + num2
+            var soma =(String(soma)).replace(".", ",")
+            resultado.innerHTML = `A soma dos números é: <strong>${soma}</strong>`
+        }
+    </script>
+<input type="number" id="v1"><br>
+<input type="number" id="v2">
+<p id="res">A soma dos números é: </p>
+<button type="button" onclick="Soma()">Soma </button>
+</body>
+</html>
