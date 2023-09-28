@@ -10,15 +10,15 @@
     <script type="text/javascript">
         function trocaLampada(){
             var image = document.getElementById("lampada");
-            if(image.src.match("lampada_acesa.jpg")){
-                image.src = "lampada_apagada.jpg";
+            if(image.src.match("lampada_apagada.jpg")){
+                image.src = "lampada_acesa.jpg";
             }
             else{
-                image.src = "lampada_acesa.jpg";
+                image.src = "lampada_apagada.jpg";
             }
         }
     </script>
-    <p><img id="lampada" onclick="trocaLampada()" src="lampada_acesa.jpg" width=140 height=180></p>
+    <p><img id="lampada" onmouseover="trocaLampada()" onmouseout="trocaLampada()" src="lampada_apagada.jpg" width=140 height=180></p>
     <p>Clique na lampada para acender/apagar a luz</p>
 </body>
 </html>

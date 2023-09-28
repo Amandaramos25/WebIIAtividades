@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function calcularDesconto(){
+            var tn1 = document.getElementById("preco")
+            var preco = Number(tn1.value)
+            var resultado = document.getElementById("res")
+            var desconto = preco - (preco * 0.05)
+            var desconto =(String(desconto)).replace(".", ",")
+            resultado.innerHTML = `O valor do desconto é de: <strong>${desconto}</strong>`
+        }
+    </script>
+<input type="number" id="preco"><br>
+<p id="res">O valor do desconto é de: </p>
+<button type="button" onclick="calcularDesconto()">Calcular desconto: </button>
+</body>
+</html>
